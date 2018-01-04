@@ -1,8 +1,3 @@
-test
 <?php
-asd
-fa
-sfa
-sdf
 
-
+fixed an issue
