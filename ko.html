@@ -14,9 +14,8 @@
    
    <body>
       <div class="hello" data-bind = "css: { out_Of_Stock : productStock() <= 0 }">
-         Product Details.
+         Product Details Page
       </div>
-
       <script>
          function AppViewModel() {
             this.productStock = ko.observable(0);
@@ -28,6 +27,5 @@
          vm.productStock(100);
          }, 2000);
       </script>
-      
    </body>
 </html>
