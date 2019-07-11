@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+   <head>
+      <title>KnockoutJS CSS binding</title>
+      <script src = "https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js"
+         type = "text/javascript"></script>
+      <script src = "http://ilnplocal.com/pub/static/frontend/Aureatelabs/Ilnp/en_US/jquery.js"
+         type = "text/javascript"></script>
+      <script src = "popover.js"
+         type = "text/javascript"></script>
+      <script src = "http://ilnplocal.com/pub/static/frontend/Aureatelabs/Ilnp/en_US/css/bootstrap/dist/js/bootstrap.js"
+         type = "text/javascript"></script>
+      <link  rel="stylesheet" type="text/css"  media="all" href="sample.css" />
+   </head>
+   
+   <body>
+      <div class="hello" data-bind = "css: { out_Of_Stock : productStock() <= 0 }">
+         Product Details Page
+      </div>
+      <script>
+         function AppViewModel() {
+            this.productStock = ko.observable(0);
+         }
+         
+         var vm = new AppViewModel();
+         ko.applyBindings(vm);
+         setTimeout(function(){
+         vm.productStock(100);
+         }, 2000);
+      </script>
+   </body>
+</html>
